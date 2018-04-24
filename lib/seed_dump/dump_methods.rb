@@ -90,6 +90,7 @@ class SeedDump
       end
 
       io.write("\n]#{active_record_import_options(options)})\n")
+      io.write("puts '#{model_for(records)} finished'")
 
       if options[:file].present?
         nil
